@@ -308,7 +308,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>13</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1233,7 +1233,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>341804472.870588</real>
+		<real>341804557.59331602</real>
 		<string>{0, 1147}</string>
 		<string>{0, 0}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
@@ -1278,7 +1278,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {917, 490}}</string>
+		<string>{{0, 0}, {917, 623}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2128,7 +2128,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>341804472.86984199</real>
+		<real>341804557.59244299</real>
 		<string>{0, 1147}</string>
 		<dict>
 			<key>$class</key>

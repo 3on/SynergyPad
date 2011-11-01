@@ -1,0 +1,82 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+img {
+	border: 0px;
+}
+
+ul, dl {
+	list-style-type: n;
+}
+
+body {
+	background-image: url(images/brushed_alu.png);
+	height: 100%;
+	width: 100%;
+}
+
+.left, .right {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#header h1{
+	margin: 10px;
+	color: #212321;
+	text-shadow: 3px 1px 2px #ffffff;
+}
+
+/* big block */
+
+#people, #opportunity {
+	margin: 10px;
+	background-color: #292925;
+	color: white;
+}
+
+#people h1, #opportunity h1{
+	font-variant: small-caps;
+}
+
+
+.infos {
+	background-color: #1a1917;
+	height: 120px;
+}
+.infos > img {
+	float: left;
+	height: 100px;
+	width: 100px;
+	border: 2px solid white;
+	margin: 10px;
+	margin-top: 8px;
+	margin-right: 20px;
+}
+.infos > h1{
+	padding-top: 15px;
+}
+
+/* new feed */
+.newsFeed {
+	padding: 10px;
+}
+
+.newsFeed > li {
+	background-color: #ffffff;
+	margin-bottom: 8px;
+	min-height: 32px;
+	color: black;
+}
+
+.newsFeed  li.add input {
+	width: 90%;
+	margin: 2px;
+	height: 24px;
+}
+.newsFeed  li.add button {
+	height: 24px;
+	width: 24px;
+} 
