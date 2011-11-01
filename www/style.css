@@ -8,7 +8,7 @@ img {
 }
 
 ul, dl {
-	list-style-type: n;
+	list-style-type: none;
 }
 
 body {
@@ -33,6 +33,7 @@ body {
 
 #people, #opportunity {
 	margin: 10px;
+	margin-top: 0px;
 	background-color: #292925;
 	color: white;
 }
@@ -64,13 +65,14 @@ body {
 	padding: 10px;
 }
 
-.newsFeed > li {
-	background-color: #ffffff;
-	margin-bottom: 8px;
+.newsFeed li.feed, .newsFeed li.add {
+	margin-bottom: 10px;
 	min-height: 32px;
 	color: black;
 }
-
+.newsFeed  li.add {
+	background-color: #ffffff;	
+}
 .newsFeed  li.add input {
 	width: 90%;
 	margin: 2px;
@@ -78,5 +80,30 @@ body {
 }
 .newsFeed  li.add button {
 	height: 24px;
-	width: 24px;
+	min-width: 24px;
+	width: 7%;
 } 
+.newsFeed  li.feed > div.post {
+	background-color: #ffffff;
+	padding: 2px;
+	min-height: 40px;
+}
+.newsFeed  li.feed > div.post > p {
+	padding: 4px;
+}
+.newsFeed li  img.like, .newsFeed  li  img.comment {
+	float: right;
+	width: 20px;
+	height: 20px;
+	clear: right;
+}
+
+.newsFeed li.feed li.comment {
+	margin: 6px 0px 6px 10%;
+	padding: 6px;
+	background-color: #1a1917;
+	color: white;
+}
+.newsFeed li.feed li.comment > span.people {
+	font-weight: bold;
+}
