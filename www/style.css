@@ -63,7 +63,7 @@ body {
 	background-color: #1a1917;
 	height: 120px;
 }
-.infos > img {
+.infos > .logo {
 	float: left;
 	height: 100px;
 	width: 100px;
@@ -71,6 +71,14 @@ body {
 	margin: 10px;
 	margin-top: 8px;
 	margin-right: 20px;
+	margin-bottom: 0;
+}
+.infos > div.logo {
+	line-height: 100px;
+	text-align: center;
+	font-size: 90px;
+	background-color: #212121;
+	color: #ffce87;
 }
 
 .infos .indicator {
@@ -182,20 +190,39 @@ div.right {
 	width: 100%;
 	position: relative;
 	background-color: #424242;
+	color: #aaaaaa;
 }
-.tabs-head li{
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-	
-	width: 48%;	
+.tabs-head li{	
+	width: 50%;
 	float: left;
-}
-.tabs-head li:first-child {
-	background-color: white;
-	color: black;
 	text-align: center;
 }
+.tabs-head li:last-child {	
+	color: black;
+	background-color: white;
+}
 
+.tabs-body > li {
+	display: none;
+	padding: 8px;
+}
+.tabs-body li:last-child{
+	display: block;
+}
 
 /* files feed */
+.files {
+	
+}
+.files li {
+	background-color: white;
+	color: black;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 60px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	background-image: url(images/file@40.png);
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+}

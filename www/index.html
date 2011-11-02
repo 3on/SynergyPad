@@ -21,7 +21,7 @@
   <div class="left">
   <div id="people">
     <div class="infos">
-      <img alt="@" src="" />
+      <img alt="@" src="images/avatar.jpeg" class="logo" />
       <h1>John Doe</h1>
       <h2>john.doe@salesforce.com</h2>
     </div>
@@ -71,7 +71,9 @@
   <div class="right">
   <div id="opportunity">
     <div class="infos">
-      <img alt="@" src="" />
+      <div class="logo">
+      B+
+      </div>
       <h1>Foo Corporation</h1>
       <h2>New Customer</h2>
     </div>
@@ -82,8 +84,55 @@
     </ul>
     
     <ul class="tabs-body">
-      <dd>blabla some news feed</dd>
-      <dd>blabla some files</dd>
+      <li>
+        <ul class="newsFeed">
+      <li class="add">
+        <input type="text" name="post" placeholder="add a post"/>
+        <button>+</button>
+      </li>
+      <li class="feed">
+        <div class="post">
+          <img alt="@" src="images/plus.png" class="like" />
+          <img alt="@" src="images/comment.png" class="comment" />
+          <p>This is a random feed post, it can be liked,
+             commented and longer than 140 characters.</p>
+        </div>
+        <ul class="comments">
+          <li class="comment">
+            <span class="people">Paul Foo</span>
+            <span>This is some good intel !</span>
+          </li>
+          <li class="add">
+            <input type="text" name="post" placeholder="add a post"/>
+            <button>+</button>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="feed">
+        <div class="post">
+          <img alt="@" src="images/plus.png" class="like" />
+          <img alt="@" src="images/comment.png" class="comment" />
+          <p>
+            This is a random feed post, it can be liked,
+             commented and longer than 140 characters.<br />
+            This is a random feed post, it can be liked,
+             commented and longer than 140 characters.<br />
+            
+          </p>
+        </div>
+        <ul class="comments">
+        </ul>
+      </li>
+    </ul>
+      </li>
+      <li>
+        <ul class="files">
+          <li>tifftiff.rar</li>
+          <li>rare.tiff</li>
+          <li>tifftiff.avi</li>
+        </ul>
+      </li>
     </dl>
   </div>
   </div>
