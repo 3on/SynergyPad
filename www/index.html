@@ -10,6 +10,7 @@
   <script type="text/javascript" charset="utf-8" src="lib/phonegap-1.1.0.js"></script>
   <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
   <script type="text/javascript" charset="utf-8" src="backbone.js"></script>
+  <script type="text/javascript" charset="utf-8" src="style.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
   
   </head>
@@ -24,7 +25,6 @@
       <h1>John Doe</h1>
       <h2>john.doe@salesforce.com</h2>
     </div>
-    
     <ul class="newsFeed">
       <li class="add">
         <input type="text" name="post" placeholder="add a post"/>
@@ -32,8 +32,8 @@
       </li>
       <li class="feed">
         <div class="post">
-          <img alt="@" src="" class="like" />
-          <img alt="@" src="" class="comment" />
+          <img alt="@" src="images/plus.png" class="like" />
+          <img alt="@" src="images/comment.png" class="comment" />
           <p>This is a random feed post, it can be liked,
              commented and longer than 140 characters.</p>
         </div>
@@ -48,6 +48,22 @@
           </li>
         </ul>
       </li>
+      
+      <li class="feed">
+        <div class="post">
+          <img alt="@" src="images/plus.png" class="like" />
+          <img alt="@" src="images/comment.png" class="comment" />
+          <p>
+            This is a random feed post, it can be liked,
+             commented and longer than 140 characters.<br />
+            This is a random feed post, it can be liked,
+             commented and longer than 140 characters.<br />
+            
+          </p>
+        </div>
+        <ul class="comments">
+        </ul>
+      </li>
     </ul>
   </div>
   </div>
@@ -60,11 +76,13 @@
       <h2>New Customer</h2>
     </div>
     
-    <dl class="tabs">
-      <dt>News Feed</dt>
+    <ul class="tabs-head">
+      <li>News Feed</li>
+      <li>Files</li>
+    </ul>
+    
+    <ul class="tabs-body">
       <dd>blabla some news feed</dd>
-      
-      <dt>Files</dt>
       <dd>blabla some files</dd>
     </dl>
   </div>
