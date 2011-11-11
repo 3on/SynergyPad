@@ -137,7 +137,7 @@ body {
 .newsFeed  li.feed > div.post {
 	background-color: #ffffff;
 	padding: 2px;
-	min-height: 40px;
+	min-height: 50px;
 }
 .newsFeed  li.feed > div.post > p {
 	padding: 4px;
