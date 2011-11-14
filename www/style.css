@@ -136,6 +136,7 @@ body {
 	color: #ffeca1;
 }
 .newsFeed  li.feed > div.post {
+  position: relative;
 	background-color: #ffffff;
 	padding: 2px;
 	min-height: 50px;
