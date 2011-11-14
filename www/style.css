@@ -99,6 +99,7 @@ body {
 .newsFeed {
 	padding: 10px;
 	height: 100%;
+	overflow: hidden;
 }
 
 .newsFeed li.feed, .newsFeed li.add {

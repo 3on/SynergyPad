@@ -8,5 +8,6 @@ function __$__ () {
 
 $(function() {
   $(window).resize(__$__)
+  $(document.body).change(__$__)
   __$__()
 })

@@ -7,12 +7,33 @@
   <script type="text/javascript" charset="utf-8" src="lib/jquery-1.6.4.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/underscore-min.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/backbone-min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/localstorage.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/phonegap-1.1.0.js"></script>
   <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
   <script type="text/javascript" charset="utf-8" src="backbone.js"></script>
   <script type="text/javascript" charset="utf-8" src="style.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
-  
+  <script type="text/template" id="tmpl-post">
+    <li class="feed">
+        <div class="post">
+          <img alt="@" src="images/plus.png" class="like" />
+          <img alt="@" src="images/comment.png" class="comment" />
+          <p><%= text %></p>
+        </div>
+        <ul class="comments">
+          <li class="add">
+            <input type="text" name="post" placeholder="add a post"/>
+            <button>+</button>
+          </li>
+        </ul>
+    </li>
+  </script>
+  <script type="text/template" id="tmpl-com">
+    <li class="comment">
+      <span class="people">Paul Foo</span>
+      <span>This is some good intel !</span>
+    </li>
+  </script>
   </head>
   <body onload="onBodyLoad()">
   <div id="header">
@@ -25,7 +46,8 @@
       <h1>John Doe</h1>
       <h2>john.doe@salesforce.com</h2>
     </div>
-    <ul class="newsFeed">
+
+    <ul class="newsFeed" id="peopleFeed">
       <li class="add">
         <input type="text" name="post" placeholder="add a post"/>
         <button>+</button>
