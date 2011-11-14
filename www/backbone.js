@@ -1,6 +1,14 @@
 function init() {
     window.People = {}
-    window.People.post = Backbone.Model.extend({})
+    window.People.comment = Backbone.Model.extend({})
+    window.People.commentList = Backbone.Collection.extend({
+          model: window.People.comment
+        })
+    window.People.post = Backbone.Model.extend({
+      default: function() {
+        return {comments: new People.commentList()}
+      }
+    })
     window.People.postList = Backbone.Collection.extend({
         model: window.People.post,
         localStorage: new Store("PeopleFeed"),
@@ -15,12 +23,16 @@ function init() {
         events: {
             'click li.feed div.post'  : 'showComments',
             'click img.comment'       : 'showComments',
-            'click img.like'        : 'likePost'
+            'click img.like'          : 'likePost',
+            'keypress #peopleFeed li.feed li.add input' : 'addOnEnter',
+            'click #peopleFeed li.feed li.add button' : 'addOnClick',
         },
 
         initialize: function() {
             this.model.bind('change', this.render, this);
             this.model.bind('destroy', this.remove, this);
+            this.input = $(this.el).select('li.add input').first()
+            console.log(this)
         },
 
         showComments: function() {
@@ -32,12 +44,31 @@ function init() {
             alert('Like')
             return false
         },
+        
+        addOnEnter: function(e) {
+            var text = this.input.val();
+            this.comments.create({
+                author: 'Someone',
+                text: text
+            });
+            this.input.val('');
+        },
+        
+        addOnClick: function(e) {
+            var text = this.input.val();
+            People.feed.create({
+                author: 'Someone',
+                text: text
+            });
+            this.input.val('')
+            return false
+        },
 
         render: function() {
             $(this.el).html(this.template(this.model.toJSON()));
             return this;
         },
-
+        
         remove: function() {
             $(this.el).remove();
         }
@@ -99,7 +130,7 @@ function init() {
 
 $(function() {
     init()
-    var feed = new People.feedView()
+    var peopleFeed = new People.feedView()
 })
 
 

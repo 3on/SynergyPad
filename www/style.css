@@ -170,6 +170,7 @@ body {
 }
 
 .newsFeed li.feed li.add {
+  margin-top: 5px;
 	margin-left: 10%;
 	color: white;
 	background-color: #000;
